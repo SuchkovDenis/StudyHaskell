@@ -1,4 +1,4 @@
-# TestHaskell
+# Study Haskell
 
 https://www.youtube.com/watch?v=vn1IOxVplKQ&list=PLHRF-X-NtQR4MZBvm05NshPIEI8ELID5m
 
@@ -38,4 +38,21 @@ stack new TestHaskell
 
 ```
 stack ghci src/Lib.hs
+```
+
+## Определение локальных переменных или локальных функций
+
+```
+poly x = let
+    y = x + 1
+    in y * y
+```
+
+или
+
+```
+sumEvenOdds xs = sum (incr (evens xs))
+    where
+        incr xs = map (+1) xs
+        evens xs = filter even xs
 ```
